@@ -1,0 +1,690 @@
+From CheckCvinfo pagetitle
+
+let address = computed(() => store.state.cvform.formData.address);
+let selectedRegionValue = computed(() => store.state.cvform.formData.selectedRegionValue);
+let weight = computed(() => store.state.cvform.formData.weight);
+let heightFeet = computed(() => store.state.cvform.formData.heightFeet);
+let heightInches = computed(() => store.state.cvform.formData.heightInches);
+let selectedEducationValue = computed(() => store.state.cvform.formData.selectedEducationValue);
+let experience = computed(() => store.state.cvform.formData.experience);
+let familyTree = computed(() => store.state.cvform.formData.familyTree);
+let howdidyouknow = computed(() => store.state.cvform.formData.howdidyouknow);
+let getContact = computed(() => store.state.cvform.formData.getContact);
+let phoneNumber = computed(() => store.state.cvform.formData.phoneNumber);
+let havePassport = computed(() => store.state.cvform.formData.havePassport);
+let dopassport = computed(() => store.state.cvform.formData.dopassport);
+let passportCost = computed(() => store.state.cvform.formData.passportCost);
+let vaccinated = computed(() => store.state.cvform.formData.vaccinated);
+let firstVaccineName = computed(() => store.state.cvform.formData.firstVaccineName);
+let firstVaccineDate = computed(() => store.state.cvform.formData.firstVaccineDate);
+let secondVaccineName = computed(() => store.state.cvform.formData.secondVaccineName);
+let secondVaccineDate = computed(() => store.state.cvform.formData.secondVaccineDate);
+let thirdVaccineName = computed(() => store.state.cvform.formData.thirdVaccineName);
+let thirdVaccineDate = computed(() => store.state.cvform.formData.thirdVaccineDate);
+let vaccineNote = computed(() => store.state.cvform.formData.vaccineNote);
+let colorBlind = computed(() => store.state.cvform.formData.colorBlind);
+let englishSkill = computed(() => store.state.cvform.formData.englishSkill);
+let mathSkill = computed(() => store.state.cvform.formData.mathSkill);
+let canWait = computed(() => store.state.cvform.formData.canWait);
+let haveRelatives = computed(() => store.state.cvform.formData.haveRelatives);
+let foreignExp = computed(() => store.state.cvform.formData.foreignExp);
+let bribe = computed(() => store.state.cvform.formData.bribe);
+
+----------------------------------------------------------------------------------
+let address = computed(() => store.state.cvform.address);
+  let selectedRegionValue = computed(() => store.state.cvform.selectedRegionValue);
+  let weight = computed(() => store.state.cvform.weight);
+  let heightFeet = computed(() => store.state.cvform.heightFeet);
+  let heightInches = computed(() => store.state.cvform.heightInches);
+  let selectedEducationValue = computed(() => store.state.cvform.selectedEducationValue);
+  let experience = computed(() => store.state.cvform.experience);
+  let familyTree = computed(() => store.state.cvform.familyTree);
+  let howdidyouknow = computed(() => store.state.cvform.howdidyouknow);
+  
+  let getContact = computed(() => store.state.cvform.getContact);
+  let phoneNumber = computed(() => store.state.cvform.phoneNumber);
+  let dopassport = computed(() => store.state.cvform.dopassport);
+  let passportCost = computed(() => store.state.cvform.passportCost);
+
+  let canWait = computed(() => store.state.cvform.canWait);
+  let haveRelatives = computed(() => store.state.cvform.haveRelatives);
+  let havePassport = computed(() => store.state.cvform.havePassport);
+  let vaccinated = computed(() => store.state.cvform.vaccinated);
+  let colorBlind = computed(() => store.state.cvform.colorBlind);
+  let englishSkill = computed(() => store.state.cvform.englishSkill);
+  let mathSkill = computed(() => store.state.cvform.mathSkill);
+  let foreignExp = computed(() => store.state.cvform.foreignExp);
+  let bribe = computed(() => store.state.cvform.bribe); 
+ 
+ 
+ 
+ 
+ 
+ --------------------------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ console.log('User Id From Local Storage ==>', userid);
+            console.warn('Submit Form Value -->', submitToDb.value, typeof(submitToDb.value));
+
+            
+            console.log('Address =>',data.address, typeof(data.address));
+            console.log('Region =>',data.selectedRegionValue, typeof(data.selectedRegionValue));
+            console.log('Weight =>',data.weight, typeof(data.weight));
+            console.log('Height Feet =>',data.heightFeet, typeof(data.heightFeet));
+            console.log('Height Inches =>',data.heightInches, typeof(data.heightInches));
+            console.log('Education =>',data.selectedEducationValue, typeof(data.selectedEducationValue));
+            console.log('Experience =>',data.experience, typeof(data.experience));
+            console.log('Family Tree =>',data.familyTree, typeof(data.familyTree));
+            console.log('How Did You Know =>',data.howdidyouknow, typeof(data.howdidyouknow));
+            console.log('Get Contact =>',data.getContact, typeof(data.getContact));
+            console.log('Phone Number =>',data.phoneNumber, typeof(data.phoneNumber));
+            console.log('Have Passport =>',data.havePassport, typeof(data.havePassport));
+            console.log('Do Passport =>',data.dopassport, typeof(data.dopassport));
+            console.log('Passport Cost =>',data.passportCost, typeof(data.passportCost));
+            console.log('Vaccinated =>',data.vaccinated, typeof(data.vaccinated));
+            console.log("First Vaccine Name", data.firstVaccineName, typeof(data.firstVaccineName));
+            console.log('First Vaccine Date',data.firstVaccineDate, typeof(data.firstVaccineDate));
+
+            console.log("Second Vaccine Name", data.secondVaccineName, typeof(data.secondVaccineName));
+            console.log('Second Vaccine Date',data.secondVaccineDate, typeof(data.secondVaccineDate));
+            
+            console.log("Third Vaccine Name", data.thirdVaccineName, typeof(data.thirdVaccineName));
+            console.log('Third Vaccine Date',data.thirdVaccineDate, typeof(data.thirdVaccineDate));
+
+            console.log('Vaccine Note', data.vaccineNote, typeof(data.vaccineNote));
+            console.log('Color Blind =>',data.colorBlind, typeof(data.colorBlind));
+            console.log('English Skill =>',data.englishSkill, typeof(data.englishSkill));
+            console.log('Math Skill  =>',data.mathSkill, typeof(data.mathSkill));
+            console.log('Can Wait =>',data.canWait, typeof(data.canWait));
+            console.log('Have Relatives =>',data.haveRelatives, typeof(data.haveRelatives));
+            console.log('Foreign Experience', data.foreignExp, typeof(data.foreignExp));
+            console.log('Bribe', data.bribe, typeof(data.bribe));
+
+            console.warn("Address value --->",) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ user_id:'5',
+        address:address.value,
+        state:selectedRegionValue.value,
+        weight:weight.value,
+        height:heightFeet.value,
+        education:selectedEducationValue.value,
+        work_exp:experience.value,
+        has_family_list:'1',
+        answer_1:howdidyouknow.value,
+        answer_2:getContact.value,
+        phone_number:phoneNumber.value,
+        has_passport:'1',
+        answer_3:dopassport.value,
+        passport_cost:passportCost.value,
+        has_covid_vaccine:'1',
+        first_covid_vaccine_name:'Gino',
+        first_vaccinated_date:'1/1/2021',
+        second_covid_vaccine_name:'Gino',
+        second_vaccinated_date:'1/1/2021',
+        third_covid_vaccine_name:'Gino',
+        third_vaccinated_date:'1/1/2021',
+        vaccinated_note:'GOod',
+        is_color_blind:'1',
+        has_e_skill:'1',
+        has_math_skill:'1',
+        can_wait:'1',
+        has_family_in_foreign:'1',
+        has_workexp_in_foreign:'1',
+        has_paid_forJob:'1'
+
+
+
+<script>
+// import { computed } from 'vue';
+import { ref,computed } from 'vue';
+import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
+import store from '@/store';
+
+export default {
+  setup(){
+    const store = useStore();
+    const router = useRouter();
+    const isChecked = ref(false);
+
+    const selectedRegionValue = ref('');
+    const selectedEducationValue = ref('');
+    const address = ref('');
+    const weight = ref('');
+    const heightFeet = ref('');
+    const heightInches = ref('');
+    const experience = ref('');
+    const familyTree = ref('');
+    const howdidyouknow = ref('');
+    const getContact = ref('');
+    const phoneNumber = ref('');
+    const dopassport = ref('');
+    const passportCost = ref('');
+    const canWait = ref('');
+    const haveRelatives = ref('');
+    const havePassport = ref('');
+    const vaccinated = ref('');
+    const colorBlind = ref('');
+    const englishSkill = ref('');
+    const mathSkill = ref('');
+    const foreignExp = ref('');
+    const bribe = ref('');
+    
+    // photo upload section 
+    // const uploadedImage = computed(() => store.state.cvform.uploadedImage);
+    
+    // const handleImageUpload = (event) =>{
+    //   const file = event.target.files[0];
+    //     console.log("Image Value", file);
+    //     console.log("Image File Type", typeof(file));
+    //     store.dispatch('cvform/uploadImage', file);
+    // };
+
+    let formData = ref(
+        {
+       
+      }
+      );
+
+   
+
+  
+    const submitForm = async function(){
+      await store.dispatch('cvform/updateFormdata', formData.value);
+      router.push('/checkcvinfo');
+
+      // store.dispatch('cvform/updateAddress', address.value);
+      // store.dispatch('cvform/updateRegion', selectedRegionValue.value);
+      // store.dispatch('cvform/updateWeight', weight.value);
+      // store.dispatch('cvform/updateHeightFeet', heightFeet.value);
+      // store.dispatch('cvform/updateHeightInches', heightInches.value);
+      // store.dispatch('cvform/updateEducation', selectedEducationValue.value);
+      // store.dispatch('cvform/updateExperience', experience.value);
+      // store.dispatch('cvform/updateFamilyTree', familyTree.value);
+      // store.dispatch('cvform/updateHowDidYouKnow', howdidyouknow.value);
+      // store.dispatch('cvform/updateGetContact', getContact.value);
+      // store.dispatch('cvform/updatePhoneNo', phoneNumber.value);
+      // store.dispatch('cvform/updateHowYouGetPassport', dopassport.value);
+      // store.dispatch('cvform/updatePassportCost', passportCost.value);
+      // store.dispatch('cvform/updateCanWait', canWait.value);
+      // store.dispatch('cvform/updateHaveRelatives' , haveRelatives.value);
+      // store.dispatch('cvform/updateHavePassport', havePassport.value);
+      // store.dispatch('cvform/updateVaccinated', vaccinated.value);
+      // store.dispatch('cvform/updateColorBlind', colorBlind.value);
+      // store.dispatch('cvform/updateEnglishSkill', englishSkill.value);
+      // store.dispatch('cvform/updateMathSkill', mathSkill.value);
+      // store.dispatch('cvform/updateForeignExp', foreignExp.value);
+      // store.dispatch('cvform/updateBribe', bribe.value);
+
+      
+      
+      
+     
+      // console.log('Form Data value', formData.value, typeof(formData.value), formData.value.data);
+      // console.log('Form Data value', formData);
+      // console.log('Address', address.value, address.value, typeof(address.value));
+      // console.log('can wait', canWait.value, typeof(canWait.value));
+      // console.log('Selected Region', selectedRegionValue.value, typeof(selectedRegionValue.value));
+    }
+
+    return{
+      formData,
+      // sendAllData,
+      // uploadedImage,
+      // handleImageUpload,
+      isChecked,
+      selectedRegionValue,
+      selectedEducationValue,
+      address,
+      weight,
+      heightFeet,
+      heightInches,
+      experience,
+      familyTree,
+      howdidyouknow,
+      getContact,
+      phoneNumber,
+      dopassport,
+      passportCost,
+      canWait,
+      haveRelatives,
+      havePassport,
+      vaccinated,
+      colorBlind,
+      englishSkill,
+      mathSkill,
+      foreignExp,
+      bribe,
+      submitForm,
+
+    }
+
+
+    
+}
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<template>
+    <h3>CV Form</h3>
+    <div class="cv_container">
+        <div class="cv_title">
+            <h4 class="title">Pre Interview</h4>
+        </div>
+        <div class="reminder">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minima molestias repudiandae, facilis ut cum maiores soluta mollitia dignissimos ipsum at expedita deleniti, nulla ipsa commodi impedit cupiditate ullam consequatur?</p>
+        </div>
+        <div class="agrement">
+            <label for="agrement">Yes I Agree</label>
+            <input type="checkbox">
+            </></div>
+
+        <div class="photo_upload">
+            <label for="Photo">Photo</label>
+            <input type="file" accept="image/*">
+                <button /> @click="uploadPhoto">Upload Photo</button>
+        </div>
+
+        <div class="address">
+            <label for="address">Address</label>
+            <input type="text">
+            </></div>
+
+        <div class="select-box">
+            <div class="state">State / Region</div>
+            <div class="selected-option" /> @click="toggleDropdown">
+            <span>{{ selectedState }}</span>
+            <i class="arrow-down"></i>
+        </div>
+        <ul v-if="isDropdownOpen" class="dropdown-options">
+            <li v-for="state in states" /> :key="state" @click="selectState(state)">{{ state }}</li>
+    </ul>
+</div><div class="row weight&height">
+        <div class="weight">
+            <label for="weight">Weight</label>
+            <div class="weight_box">
+                <input type="number">
+                    <span>Lb</span>
+                </></div>
+        </div>
+        <div class="height">
+            <label for="height">Height</label>
+            <div class="height_box_feet">
+                <input type="number" name="" id="">
+                    <span>Ft</span>
+                </></div>
+            <div class="height_box_inches">
+                <input type="number">
+                    <span>Inches</span>
+                </></div>
+        </div>
+    </div><div class="education">
+        <div class="education_box"><p>Education</p></div>
+        <div class="selected-option" /> @click="toggleDropdown">
+        <span>{{ selectedState }}</span>
+        <i class="arrow-down"></i>
+    </div><ul v-if="isDropdownOpen" class="dropdown-options">
+        <li v-for="state in states" /> :key="state" @click="selectState(state)">{{ state }}</li></>
+        </ul>
+    </div>
+
+    <div class="experience">
+        <label for="experience">Experience</label>
+        <input type="text" name="experience" id="experience">
+    </div>
+
+    <div class="familytree">
+        
+        <label for="toggle">Do You Have Family Tree</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+  
+    </div>
+
+    <div class="howdoyouknowthis">
+        <label for="get_that_info">How Do You Know About This?</label>
+        <input type="text" name="get_that_info" id="get_that_info">
+    </div>
+
+    <div class="get_contact_box">
+        <label for="get_contact">How Do You Get Contact About That?</label>
+        <input type="text" name="get_contact" id="get_contact">
+    </div>
+
+    <div class="phoneno">
+        <label for="phone">Phone Number</label>
+        <div>
+            <p>+95</p>
+            <input type="number" name="phone" id="phone">
+        </div>
+    </div>
+
+    <div class="passporthave">
+        <label for="passport">Have Passport</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="passportcost">
+        <label for="passportcost">Passport Cost</label>
+        <input type="number" name="passportcost" id="passportcost">
+        <span>Kyats</span>
+    </div>
+
+    <div class="covid_vaccine">
+        <label for="passport">Vaccinated Covid-19 ?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="colorblind">
+        <label for="passport">Can Distinguish Color ?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="english_skill">
+        <label for="passport">English Skill?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="math_skill">
+        <label for="passport">Math Skill?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="can_wait">
+        <label for="passport">Can Wait ?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="have_relatives_there">
+        <label for="passport">Have Any Relatives Over There ?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="oversea_experience">
+        <label for="passport">Have Oversea Experience ?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="any_cost_for_this">
+        <label for="passport">Any Cost For Applying That Job ?</label>
+        <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" id="yes" value="yes" v-model="selectedOption" />
+            Yes
+        </label>
+        <label class="toggle-label">
+            <input type="radio" id="no" value="no" v-model="selectedOption" />
+            No
+        </label>
+        </div>
+    </div>
+
+    <div class="row submit">
+        <div class="d-flex cancle">
+            <button class="canclebtn">Cancle</button>
+        </div>
+        <div class="d-flex go">
+            <button class="gobtn">Submit</button>
+        </div>
+    </div>
+
+
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue';
+export default {
+    name: 'cvform',
+
+    setup() {
+    const selectedState = ref('');
+    const isDropdownOpen = ref(false);
+    const states = [
+    "Ayeyarwady",
+    "Bago",
+    "Chin",
+    "Kachin",
+    "Kayah",
+    "Kayin",
+    "Magway",
+    "Mandalay",
+    "Mon",
+    "Naypyidaw",
+    "Rakhine",
+    "Sagaing",
+    "Shan",
+    "Tanintharyi",
+    "Yangon"
+    ];
+
+    const toggleDropdown = () => {
+      isDropdownOpen.value = !isDropdownOpen.value;
+    };
+
+    const selectState = (state) => {
+      selectedState.value = state;
+      isDropdownOpen.value = false;
+    };
+
+    return {
+      selectedState,
+      isDropdownOpen,
+      states,
+      toggleDropdown,
+      selectState
+    };
+  }
+}
+</script>
+
+<style>
+    .select-box {
+  position: relative;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.arrow-down {
+  margin-left: 0.5rem;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.dropdown-options li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown-options li:hover {
+  background-color: #f2f2f2;
+}
+</style>
+
+
+
+
+____________________Image Upload from local code ____________________________
+
+<template>
+    <div class="container col-12 bg-danger">
+      <input type="file" ref="fileInput" @change="handleFileInputChange" />
+      <button @click="uploadPhoto">Upload</button>
+      <img v-if="imageUrl" :src="imageUrl" alt="Uploaded Photo" />
+    </div>
+  </template>
+  
+  <script>
+  import { ref } from 'vue';
+  import { useStore } from 'vuex';
+  
+  export default {
+    setup() {
+      const fileInput = ref(null);
+      const imageUrl = ref(null);
+      const store = useStore();
+  
+      const handleFileInputChange = () => {
+        const file = fileInput.value.files[0];
+        const reader = new FileReader();
+  
+        reader.onload = (e) => {
+          imageUrl.value = e.target.result;
+        };
+  
+        reader.readAsDataURL(file);
+      };
+  
+      const uploadPhoto = () => {
+        // Dispatch the 'cvform/updateImage' action
+        store.dispatch('cvform/updateImage', imageUrl.value);
+      };
+  
+      return {
+        fileInput,
+        imageUrl,
+        handleFileInputChange,
+        uploadPhoto
+      };
+    }
+  };
+  </script>
+  
